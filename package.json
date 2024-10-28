@@ -1,0 +1,42 @@
+{
+  "name": "electron-vue3",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron:dev": "concurrently \"vite\" \"electron .\"",
+    "electron:build": "npm run build && electron-builder"
+  },
+  "dependencies": {
+    "vue": "^3.5.12"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
+    "concurrently": "^7.6.0",
+    "electron": "^33.0.2",
+    "electron-builder": "^25.1.8",
+    "vite": "^5.4.10",
+    "wait-on": "^6.0.1"
+  },
+  "description": "An Electron application with Vue 3 using Vite",
+  "author": "Your Name <your.email@example.com>",
+  "build": {
+    "appId": "com.example.electron-vue3",
+    "productName": "Electron-vue3桌面应用",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/main.js"
+    ],
+    "win": {
+      "target": "nsis",
+      "requestedExecutionLevel": "highestAvailable"
+    }
+  }
+}
