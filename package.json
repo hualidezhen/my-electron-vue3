@@ -12,13 +12,17 @@
     "electron:build": "npm run build && electron-builder"
   },
   "dependencies": {
+    "electron-reloader": "^1.2.3",
+    "naive-ui": "^2.40.1",
     "vue": "^3.5.12"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.4",
     "concurrently": "^7.6.0",
-    "electron": "^33.0.2",
+    "electron": "^33.2.0",
     "electron-builder": "^25.1.8",
+    "electron-reload": "^2.0.0-alpha.1",
+    "less": "^4.2.0",
     "vite": "^5.4.10",
     "wait-on": "^6.0.1"
   },
