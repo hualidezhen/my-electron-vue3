@@ -1,6 +1,6 @@
 <template>
 <!--设置按钮-->
-  <button  @click="openSettings" style="-webkit-app-region: no-drag;" class="button">
+  <button  v-if="!onpageshow" @click="openSettings" style="-webkit-app-region: no-drag;" class="button">
     <span class="svg">
       <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -18,11 +18,11 @@
   </button>
   <!--设置按钮-->
 <!--  设置面板-->
-<settings-panel v-if="onpageshow"></settings-panel>
+<SettingsPanel v-if="onpageshow"></SettingsPanel>
   <!--  设置面板-->
 </template>
 <script setup>
-import SettingsPanel from './SettingsPanel'
+import SettingsPanel from './SettingsPanel.vue'
 import { ref } from 'vue'
 const onpageshow = ref(false)
 const openSettings = () => {

@@ -21,11 +21,11 @@ function createWindow() {
     },
   });
   // 生成文件路径
-  const indexPath = path.join(__dirname, '../dist/index.html');
+  // const indexPath = path.join(__dirname, '../dist/index.html');
 
   // 加载 Vue 开发服务器的地址
-  // win.loadURL('http://localhost:3000');
-  win.loadURL(indexPath);
+  win.loadURL('http://localhost:3000');
+  // win.loadURL(indexPath);
   win.webContents.openDevTools(); // 开启开发者工具
 
   // 监听窗口关闭事件
