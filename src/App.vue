@@ -1,8 +1,8 @@
 <template>
-<div>
+<div class="app-content">
   <div  class="card">
     <div class="tools">
-      <div @click="handleClose" style="-webkit-app-region: no-drag;" class="circle">
+      <div @click="handleClose" style="-webkit-app-region: drag;" class="circle">
         <span class="red box"></span>
       </div>
       <div  @click="handleMinimize" style="-webkit-app-region: no-drag;"  class="circle">
@@ -16,14 +16,25 @@
     </div>
   </div>
   <div>
-    <index></index>
-<!--    <Home></Home>-->
+    <!-- <index></index> -->
+   <!-- <Home></Home> -->
+   <!-- <Login></Login> -->
+
+    <n-message-provider>
+    <!-- <router-view /> -->
+   <!-- <Login></Login> -->
+    <RouterView />
+
+  </n-message-provider>
+
   </div>
 </div>
 </template>
 <script setup>
 import index from './components/time/index.vue';
 import Home from './components/Home.vue';
+import Login from './components/Login.vue';
+
 import {onMounted} from "vue";
 
 const handleClose = () => {
@@ -45,6 +56,12 @@ onMounted(() => {
 });
 </script>
 <style lang="less" scoped>
+.app-content{
+    		background: #161f27
+			url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAhBAMAAAClyt9cAAAAJ1BMVEUAAAAAAAAAgP8A//8rqv8r1f8kttszzP83tu08w/82vP82yf////9YRBj1AAAADHRSTlMAAQICBgYHCg4RExP+fJVBAAAAAWJLR0QMgbNRYwAAADRJREFUKM9jYEABrAEMDKMiw1yEsXI6mgh7k0UBQxoyyFZgnsDgggy8DJgnoOlqtijANBkAPzsYSlqP/xIAAAAASUVORK5CYII=')
+			repeat;
+}
+
 .close-svg {
   z-index: 100;
   position: fixed;
@@ -69,6 +86,7 @@ onMounted(() => {
 </style>
 <style scoped>
 .card {
+  position: absolute;
   height: 20px;
   margin: -10px 0 5px 0;
   z-index: 1;

@@ -14,7 +14,7 @@ const second = ref(0);
 // 计算剩余时间的函数
 const calculateTimeLeft = () => {
   const now = new Date();
-  const targetTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 18, 0, 0);
+  const targetTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 17, 30, 0);
 
   if (now >= targetTime) {
     // 如果当前时间已经过了 18:00，则计算到第二天的 18:00

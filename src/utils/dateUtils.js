@@ -19,7 +19,7 @@ export function nextWeekend(date) {
 export function nextPayday(date) {
     const year = date.getFullYear();
     const month = date.getMonth();
-    const day = 8; // 发工资的日期
+    const day = 15; // 发工资的日期
 
     const nextPayday = new Date(year, month, day);
 
