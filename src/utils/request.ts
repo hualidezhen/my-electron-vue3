@@ -7,10 +7,12 @@ import { getToken, removeToken } from './auth'
 import { loadingClose, opLoading } from './Loading'
 import { ref } from 'vue'
 const whiteList = ['getTrueRelease', 'validata/code', 'getEmpowerStatus', 'oauth/token']
-let baseUrl = '/dev-api'
+// let baseUrl = '/dev-api'
 // if (import.meta.env.VITE_API_BASEURL) {
 //   baseUrl = import.meta.env.VITE_API_BASEURL
 // }
+
+const baseUrl = 'http://192.168.100.218:9900';
 const request = axios.create({
   baseURL: baseUrl,
   // baseURL: 'http://192.168.100.218:9900',

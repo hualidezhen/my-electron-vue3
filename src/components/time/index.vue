@@ -44,10 +44,7 @@ import  Settings from './SettingsBtn.vue'
 
 const isTop = ref(true);
 
-// const toggleTop = () => {
-//   isTop.value = !isTop.value;
-//   window.electron.toggleAlwaysOnTop(isTop.value);
-// };
+
 onMounted(() => {
 
 });
@@ -65,11 +62,6 @@ onMounted(() => {
   align-items: stretch; /* 使子元素水平拉伸以填满容器宽度 */
   margin-top: 0 !important;
   padding: 30px 10px 10px;
-
-  // background-color: #fcfcfc;
-  		// background: #161f27
-			// url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAhBAMAAAClyt9cAAAAJ1BMVEUAAAAAAAAAgP8A//8rqv8r1f8kttszzP83tu08w/82vP82yf////9YRBj1AAAADHRSTlMAAQICBgYHCg4RExP+fJVBAAAAAWJLR0QMgbNRYwAAADRJREFUKM9jYEABrAEMDKMiw1yEsXI6mgh7k0UBQxoyyFZgnsDgggy8DJgnoOlqtijANBkAPzsYSlqP/xIAAAAASUVORK5CYII=')
-			// repeat;
 
   /* 添加边框阴影效果 */
   .box-body {

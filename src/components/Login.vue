@@ -72,8 +72,6 @@
 import type { FormInst, FormItemInst, FormItemRule, FormRules } from "naive-ui";
 import { useMessage } from "naive-ui";
 import { defineComponent, ref } from "vue";
-// import { FlashOutline } from '@vicons/ionicons5'
-// import { useUserStore, useAppStore } from "@/stores";
 import type { IFormData } from "@/types/views/login/loginInter";
 import JSEncrypt from "jsencrypt";
 import { login } from "@/api/login/user";
@@ -171,7 +169,7 @@ export default defineComponent({
 
           // const errors = await formRef.value?.validate();
           if (true) {
-            console.log(2);
+            console.log(modelRef.value);
             const encrypt = new JSEncrypt();
             encrypt.setPublicKey(publicKey);
 
@@ -186,8 +184,8 @@ export default defineComponent({
             if (encryptedUsername && encryptedPassword) {
               console.log(4);
               const params: IFormData = {
-                username: encryptedUsername,
-                password: encryptedPassword,
+                username: encryptedUsername.toString(),
+                password: encryptedPassword.toString(),
                 grant_type: "password",
                 decrypt_param: "username;password",
               };
@@ -251,7 +249,7 @@ export default defineComponent({
     .sub-title {
       text-align: center;
       font-size: 14px;
-      color: #333333;
+      color: #b1a5a5;
     }
 
     .custom-n-form {
